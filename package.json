@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev & yarn tsc:watch",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "rome check .",
+    "lint:apply": "rome check --apply .",
+    "format:write": "rome format --write .",
+    "tsc": "tsc",
+    "tsc:watch": "tsc --watch"
   },
   "dependencies": {
     "next": "13.1.1",
